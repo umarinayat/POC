@@ -1,0 +1,104 @@
+/* Animal Page Styling */
+.animal-page[b-w0yom1g6d3] {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Table Controls */
+.table-controls[b-w0yom1g6d3] {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.search-box[b-w0yom1g6d3] {
+    padding: 10px;
+    width: 65%;
+    border: 1px solid #007bff;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+    .search-box:focus[b-w0yom1g6d3] {
+        border-color: #0056b3;
+    }
+
+/* Add Animal Button */
+.add-button[b-w0yom1g6d3] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .add-button:hover[b-w0yom1g6d3] {
+        background-color: #218838;
+    }
+
+/* Pagination Controls */
+.pagination[b-w0yom1g6d3] {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+    .pagination button[b-w0yom1g6d3] {
+        padding: 5px 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .pagination button:disabled[b-w0yom1g6d3] {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .pagination button:hover:not(:disabled)[b-w0yom1g6d3] {
+            background-color: #0056b3;
+        }
+
+/* Animal Table */
+.animal-table[b-w0yom1g6d3] {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .animal-table th[b-w0yom1g6d3] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .animal-table td[b-w0yom1g6d3] {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .animal-table tr:hover[b-w0yom1g6d3] {
+        background-color: #f8f9fa;
+    }
+
+

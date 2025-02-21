@@ -1,0 +1,299 @@
+/* /Pages/Animal.razor.rz.scp.css */
+/* Animal Page Styling */
+.animal-page[b-w0yom1g6d3] {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/* Table Controls */
+.table-controls[b-w0yom1g6d3] {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.search-box[b-w0yom1g6d3] {
+    padding: 10px;
+    width: 65%;
+    border: 1px solid #007bff;
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+    .search-box:focus[b-w0yom1g6d3] {
+        border-color: #0056b3;
+    }
+
+/* Add Animal Button */
+.add-button[b-w0yom1g6d3] {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+    .add-button:hover[b-w0yom1g6d3] {
+        background-color: #218838;
+    }
+
+/* Pagination Controls */
+.pagination[b-w0yom1g6d3] {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+}
+
+    .pagination button[b-w0yom1g6d3] {
+        padding: 5px 15px;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+        .pagination button:disabled[b-w0yom1g6d3] {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        .pagination button:hover:not(:disabled)[b-w0yom1g6d3] {
+            background-color: #0056b3;
+        }
+
+/* Animal Table */
+.animal-table[b-w0yom1g6d3] {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .animal-table th[b-w0yom1g6d3] {
+        background-color: #007bff;
+        color: white;
+        padding: 10px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .animal-table td[b-w0yom1g6d3] {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .animal-table tr:hover[b-w0yom1g6d3] {
+        background-color: #f8f9fa;
+    }
+
+
+/* /Pages/Dashboard.razor.rz.scp.css */
+/* General dashboard background */
+.content-wrapper[b-d13y0j53jk] {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styles */
+h1.m-0[b-d13y0j53jk] {
+    color: #343a40;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Breadcrumb styles */
+.breadcrumb[b-d13y0j53jk] {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item a[b-d13y0j53jk] {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active[b-d13y0j53jk] {
+    color: #6c757d;
+}
+
+/* Small box styles */
+.small-box[b-d13y0j53jk] {
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+    .small-box:hover[b-d13y0j53jk] {
+        transform: scale(1.05);
+    }
+
+    .small-box .inner[b-d13y0j53jk] {
+        margin-bottom: 10px;
+    }
+
+    .small-box h3[b-d13y0j53jk] {
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .small-box p[b-d13y0j53jk] {
+        font-size: 1.2rem;
+        margin: 5px 0 0;
+    }
+
+.small-box-footer[b-d13y0j53jk] {
+    display: block;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+    .small-box-footer:hover[b-d13y0j53jk] {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+/* Icon styles */
+.icon[b-d13y0j53jk] {
+    font-size: 3rem;
+    opacity: 0.3;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Alert Divider */
+.divider[b-d13y0j53jk] {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.divider-text[b-d13y0j53jk] {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+/* Refresh Icon */
+.refresh-icon[b-d13y0j53jk] {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+    .refresh-icon:hover[b-d13y0j53jk] {
+        transform: rotate(360deg);
+    }
+
+/* Box colors */
+.bg-info[b-d13y0j53jk] {
+    background-color: #17a2b8 !important;
+}
+
+.bg-success[b-d13y0j53jk] {
+    background-color: #28a745 !important;
+}
+
+.bg-warning[b-d13y0j53jk] {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+.bg-danger[b-d13y0j53jk] {
+    background-color: #dc3545 !important;
+}
+
+.bg-primary[b-d13y0j53jk] {
+    background-color: #007bff !important;
+}
+/* /UI/Tables/AnimalTable.razor.rz.scp.css */
+/* Animal Table Styling */
+.animal-table[b-86rrobol1n] {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+    /* Table Header */
+    .animal-table th[b-86rrobol1n] {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 15px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    /* Table Body */
+    .animal-table td[b-86rrobol1n] {
+        padding: 10px 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Hover Effect */
+    .animal-table tr:hover[b-86rrobol1n] {
+        background-color: #f1f9ff;
+        transition: background-color 0.3s ease;
+    }
+
+/* No Data Row */
+.no-data[b-86rrobol1n] {
+    text-align: center;
+    padding: 10px;
+    color: #999;
+}
+
+/* Status Badges */
+.status[b-86rrobol1n] {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    min-width: 60px;
+}
+
+.vaccinated[b-86rrobol1n] {
+    background-color: #28a745;
+    color: white;
+}
+
+.not-vaccinated[b-86rrobol1n] {
+    background-color: #dc3545;
+    color: white;
+}

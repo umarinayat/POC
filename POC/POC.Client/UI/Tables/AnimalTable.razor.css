@@ -1,0 +1,60 @@
+﻿/* Animal Table Styling */
+.animal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1rem;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+    /* Table Header */
+    .animal-table th {
+        background-color: #007bff;
+        color: white;
+        padding: 12px 15px;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    /* Table Body */
+    .animal-table td {
+        padding: 10px 15px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    /* Hover Effect */
+    .animal-table tr:hover {
+        background-color: #f1f9ff;
+        transition: background-color 0.3s ease;
+    }
+
+/* No Data Row */
+.no-data {
+    text-align: center;
+    padding: 10px;
+    color: #999;
+}
+
+/* Status Badges */
+.status {
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    display: inline-block;
+    text-align: center;
+    min-width: 60px;
+}
+
+.vaccinated {
+    background-color: #28a745;
+    color: white;
+}
+
+.not-vaccinated {
+    background-color: #dc3545;
+    color: white;
+}

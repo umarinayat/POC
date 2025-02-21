@@ -1,0 +1,121 @@
+﻿@page "/animals"
+@using POC.Client.Models
+@using POC.Client.UI.Tables
+@inject IJSRuntime JSRuntime
+
+
+<div class="animal-page">
+    <h1>Animal Records</h1>
+
+    <!-- Search and Add Animal Section -->
+    <div class="table-controls">
+        <input type="text" placeholder="Search by name or species..." @bind="SearchTerm" class="search-box" />
+        <button class="add-button" @onclick="AddAnimal">Add Animal</button>
+    </div>
+
+    <!-- Animal Table -->
+    <AnimalTable Animals="@PaginatedAnimals" />
+
+    <!-- Pagination Controls -->
+    <div class="pagination">
+        <button @onclick="PreviousPage" disabled="@IsFirstPage">Previous</button>
+        <span>Page @CurrentPage of @TotalPages</span>
+        <button @onclick="NextPage" disabled="@IsLastPage">Next</button>
+    </div>
+</div>
+
+<script>
+    function checking() {
+        console.log("JavaScript function called from C#!");
+        alert("Next button clicked!");
+    }
+</script>
+
+@code {
+    private List<Models.Animal> AnimalList = new();
+    private List<Models.Animal> FilteredAnimals = new();
+    private List<Models.Animal> PaginatedAnimals = new();
+
+    private string SearchTerm = string.Empty;
+    private int CurrentPage = 2;
+    private int PageSize = 3; // Animals per page
+    private int TotalPages = 2;
+    private bool IsFirstPage => CurrentPage == 1;
+    private bool IsLastPage => CurrentPage >= TotalPages;
+
+    protected override async Task OnInitializedAsync()
+    {
+        AnimalList = new List<Models.Animal>
+        {
+            new Models.Animal { Name = "Bella", Species = "Dog", IsVaccinated = true, VaccinationDate = new DateTime(2024, 1, 10) },
+            new Models.Animal { Name = "Max", Species = "Cat", IsVaccinated = false, VaccinationDate = null },
+            new Models.Animal { Name = "Charlie", Species = "Horse", IsVaccinated = true, VaccinationDate = new DateTime(2024, 3, 5) },
+            new Models.Animal { Name = "Luna", Species = "Rabbit", IsVaccinated = false, VaccinationDate = null },
+            new Models.Animal { Name = "Rocky", Species = "Dog", IsVaccinated = true, VaccinationDate = new DateTime(2024, 4, 1) },
+            new Models.Animal { Name = "Milo", Species = "Cat", IsVaccinated = false, VaccinationDate = null }
+        };
+
+        FilteredAnimals = AnimalList;
+        UpdatePagination();
+    }
+
+    private void RefreshData()
+    {
+        FilteredAnimals = AnimalList
+            .Where(a => a.Name.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase)
+                     || a.Species.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase))
+            .ToList();
+
+        CurrentPage = 1;
+        UpdatePagination();
+    }
+
+    private void UpdatePagination()
+    {
+        TotalPages = (int)Math.Ceiling(FilteredAnimals.Count / (double)PageSize);
+
+        if (TotalPages == 0)
+            TotalPages = 1;  // Ensure at least one page exists
+
+        if (CurrentPage > TotalPages)
+            CurrentPage = TotalPages;
+
+        PaginatedAnimals = FilteredAnimals
+            .Skip((CurrentPage - 1) * PageSize)
+            .Take(PageSize)
+            .ToList();
+    }
+
+    private async Task AddAnimal()
+    {
+        await JSRuntime.InvokeVoidAsync("checking");
+
+        AnimalList.Add(new Models.Animal
+            {
+                Name = "New Animal",
+                Species = "Unknown",
+                IsVaccinated = false,
+                VaccinationDate = null
+            });
+
+        RefreshData();
+    }
+
+    private async Task NextPage()
+    {
+        await JSRuntime.InvokeVoidAsync("checking"); // Use JSRuntime instead of JS
+        if (CurrentPage < TotalPages)
+        {
+            CurrentPage++;
+            UpdatePagination();
+        }
+    }
+    private void PreviousPage()
+    {
+        if (CurrentPage > 1)
+        {
+            CurrentPage--;
+            UpdatePagination();
+        }
+    }
+}

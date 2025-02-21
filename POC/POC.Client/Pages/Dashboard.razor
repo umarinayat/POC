@@ -1,0 +1,110 @@
+﻿@page "/dashboard"
+
+@inject NavigationManager Navigation
+@inject IJSRuntime JSRuntime
+
+<div class="content-wrapper bg-color">
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Dashboard</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Dashboard</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                @foreach (var stat in DashboardStats)
+                {
+                    <div class="col-lg-3 col-6">
+                        <div class="small-box @stat.BoxColor">
+                            <div class="inner">
+                                <h3>@stat.Count</h3>
+                                <p>@stat.Title</p>
+                            </div>
+                            <div class="icon">
+                                <i class="@stat.IconClass"></i>
+                            </div>
+                            <a href="@stat.Link" class="small-box-footer">
+                                More info <i class="fas fa-arrow-circle-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <div class="divider">
+                <span class="divider-text">Alerts</span>
+            </div>
+
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-primary">
+                    <div class="inner" @onclick="NavigateToPendingAnimals">
+                        <h3>@PendingVaccinations</h3>
+                        <p>Vaccinations</p>
+                    </div>
+                    <div class="icon">
+                        <i class="fas fa-syringe"></i>
+                    </div>
+                    <div class="small-box-footer">
+                        Refresh
+                        <i @onclick="GetVaccinationsCount" class="fas fa-sync-alt refresh-icon"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    private int PendingVaccinations { get; set; }
+    private List<DashboardStat> DashboardStats = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        await GetStats();
+        await GetVaccinationsCount();
+    }
+
+    private async Task GetStats()
+    {
+        // Mocking API calls, replace with actual service calls
+        DashboardStats = new List<DashboardStat>
+        {
+            new DashboardStat { Title = "Animals", Count = 120, BoxColor = "bg-info", IconClass = "fas fa-paw", Link = "/animals" },
+            new DashboardStat { Title = "Pairs", Count = 30, BoxColor = "bg-success", IconClass = "fas fa-glass-cheers", Link = "/breeding-pairs" },
+            new DashboardStat { Title = "Contacts", Count = 45, BoxColor = "bg-warning", IconClass = "fas fa-address-book", Link = "/contacts" },
+            new DashboardStat { Title = "Documents", Count = 80, BoxColor = "bg-danger", IconClass = "fas fa-file", Link = "/documents" }
+        };
+    }
+
+    private async Task GetVaccinationsCount()
+    {
+        // Mock API call to get pending vaccinations count
+        PendingVaccinations = 5;
+    }
+
+    private void NavigateToPendingAnimals()
+    {
+        Navigation.NavigateTo("/app/animalVaccinations");
+    }
+
+    public class DashboardStat
+    {
+        public string Title { get; set; } = string.Empty;
+        public int Count { get; set; }
+        public string BoxColor { get; set; } = "bg-info";
+        public string IconClass { get; set; } = string.Empty;
+        public string Link { get; set; } = "#";
+    }
+}
+

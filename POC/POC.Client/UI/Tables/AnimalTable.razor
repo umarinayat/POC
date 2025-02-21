@@ -1,0 +1,40 @@
+﻿@using POC.Client.Models
+
+<table class="animal-table">
+    <thead>
+        <tr>
+            <th>Animal Name</th>
+            <th>Species</th>
+            <th>Vaccinated</th>
+            <th>Vaccination Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Animals != null && Animals.Any())
+        {
+            @foreach (var animal in Animals)
+            {
+                <tr>
+                    <td>@animal.Name</td>
+                    <td>@animal.Species</td>
+                    <td>
+                        <span class="status @(animal.IsVaccinated ? "vaccinated" : "not-vaccinated")">
+                            @(animal.IsVaccinated ? "Yes" : "No")
+                        </span>
+                    </td>
+                    <td>@(animal.VaccinationDate?.ToString("yyyy-MM-dd") ?? "N/A")</td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td colspan="4" class="no-data">No animals found.</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    [Parameter] public List<Animal>? Animals { get; set; }
+}

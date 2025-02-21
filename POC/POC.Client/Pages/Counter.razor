@@ -1,0 +1,33 @@
+﻿@page "/counter"
+@using System.Text.Json
+@inject IJSRuntime JSRuntime
+
+@rendermode InteractiveAuto
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+<Navbar />
+
+@code {
+    private int currentCount = 0;
+
+    private async Task IncrementCount(MouseEventArgs e)
+    {
+        currentCount++;
+        await JSRuntime.InvokeVoidAsync("consoleLogMouseEvent",currentCount);
+    }
+}
+}
+
+<script>
+    function consoleLogMouseEvent(currentCount) {
+        console.log("Mouse event details:", currentCount);
+    }
+</script>
+

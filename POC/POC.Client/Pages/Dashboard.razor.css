@@ -1,0 +1,132 @@
+﻿/* General dashboard background */
+.content-wrapper {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+}
+
+/* Header styles */
+h1.m-0 {
+    color: #343a40;
+    font-weight: bold;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Breadcrumb styles */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb-item a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #6c757d;
+}
+
+/* Small box styles */
+.small-box {
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+    text-align: center;
+}
+
+    .small-box:hover {
+        transform: scale(1.05);
+    }
+
+    .small-box .inner {
+        margin-bottom: 10px;
+    }
+
+    .small-box h3 {
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .small-box p {
+        font-size: 1.2rem;
+        margin: 5px 0 0;
+    }
+
+.small-box-footer {
+    display: block;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+    .small-box-footer:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+/* Icon styles */
+.icon {
+    font-size: 3rem;
+    opacity: 0.3;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+/* Alert Divider */
+.divider {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.divider-text {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 1.1rem;
+}
+
+/* Refresh Icon */
+.refresh-icon {
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-left: 5px;
+    transition: transform 0.3s;
+}
+
+    .refresh-icon:hover {
+        transform: rotate(360deg);
+    }
+
+/* Box colors */
+.bg-info {
+    background-color: #17a2b8 !important;
+}
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}

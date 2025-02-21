@@ -1,0 +1,106 @@
+/* Homepage Wrapper */
+.homepage-wrapper[b-ibfwfzgi69] {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.hero-section[b-ibfwfzgi69] {
+    background: linear-gradient(135deg, #007bff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hero-content h1[b-ibfwfzgi69] {
+    font-size: 3rem;
+    margin: 0;
+    padding-bottom: 10px;
+}
+
+.hero-content p[b-ibfwfzgi69] {
+    font-size: 1.25rem;
+    margin: 10px 0 20px;
+}
+
+.cta-button[b-ibfwfzgi69] {
+    background-color: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .cta-button:hover[b-ibfwfzgi69] {
+        background-color: #ff4757;
+    }
+
+/* Quick Links Section */
+.quick-links[b-ibfwfzgi69] {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.link-cards[b-ibfwfzgi69] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.card[b-ibfwfzgi69] {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+    .card:hover[b-ibfwfzgi69] {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+.card-icon[b-ibfwfzgi69] {
+    font-size: 3rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.card h3[b-ibfwfzgi69] {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+/* About Section */
+.about-section[b-ibfwfzgi69] {
+    background-color: #007bff;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+    .about-section h2[b-ibfwfzgi69] {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .about-section p[b-ibfwfzgi69] {
+        font-size: 1.2rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }

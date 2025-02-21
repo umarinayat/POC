@@ -1,0 +1,58 @@
+﻿@page "/"
+@inject NavigationManager Navigation
+
+<div class="homepage-wrapper">
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Welcome to Animal Vaccination Tracker</h1>
+            <p>Effortlessly manage animal health and vaccination schedules.</p>
+            <button class="cta-button" @onclick="GoToDashboard">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Quick Links Section -->
+    <div class="quick-links">
+        <h2>Quick Access</h2>
+        <div class="link-cards">
+            @foreach (var link in QuickLinks)
+            {
+                <div class="card" @onclick="() => Navigation.NavigateTo(link.Url)">
+                    <i class="@link.IconClass card-icon"></i>
+                    <h3>@link.Title</h3>
+                    <p>@link.Description</p>
+                </div>
+            }
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>Why Choose Us?</h2>
+        <p>Our platform simplifies animal record management, ensures timely vaccinations, and provides comprehensive insights into animal health. Stay organized and never miss a vaccination again.</p>
+    </div>
+</div>
+
+@code {
+    private List<QuickLink> QuickLinks = new()
+    {
+        new QuickLink { Title = "Animals", Url = "/app/animals", IconClass = "fas fa-paw", Description = "View and manage animal records." },
+        new QuickLink { Title = "Vaccinations", Url = "/app/vaccinations", IconClass = "fas fa-syringe", Description = "Track and schedule vaccinations." },
+        new QuickLink { Title = "Reports", Url = "/app/reports", IconClass = "fas fa-chart-line", Description = "Generate health and vaccination reports." },
+        new QuickLink { Title = "Contacts", Url = "/app/contacts", IconClass = "fas fa-address-book", Description = "Manage animal owners and vets." }
+    };
+
+    private void GoToDashboard()
+    {
+        Navigation.NavigateTo("/dashboard");
+    }
+
+    public class QuickLink
+    {
+        public string Title { get; set; } = string.Empty;
+        public string Url { get; set; } = string.Empty;
+        public string IconClass { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
+    }
+}
+
