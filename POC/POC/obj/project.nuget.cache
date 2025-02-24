@@ -1,12 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "pH91WqpoShOh9Jp0cmZh1q+EGr8BXwBmDZ+PSQVsvxEoPYwUHrwGtsKCxIx5Tcf95HVPYOSXx8GvQYozgwNR1Q==",
+  "dgSpecHash": "4OP3Jp9EfzVdXDG2SWi86BvOQ9rTKb0A62jq1gOYWKUbsgnhZh757t+MltBMKbMCcsbxLiBv3vXvCi8Gct5UNA==",
   "success": true,
   "projectFilePath": "C:\\projects\\dotnet\\POC\\POC\\POC\\POC.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Umar\\.nuget\\packages\\aspnet.security.oauth.github\\8.0.0\\aspnet.security.oauth.github.8.0.0.nupkg.sha512",
     "C:\\Users\\Umar\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.13\\microsoft.aspnetcore.authorization.8.0.13.nupkg.sha512",
     "C:\\Users\\Umar\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.13\\microsoft.aspnetcore.components.8.0.13.nupkg.sha512",
     "C:\\Users\\Umar\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.13\\microsoft.aspnetcore.components.analyzers.8.0.13.nupkg.sha512",
+    "C:\\Users\\Umar\\.nuget\\packages\\microsoft.aspnetcore.components.authorization\\8.0.0\\microsoft.aspnetcore.components.authorization.8.0.0.nupkg.sha512",
     "C:\\Users\\Umar\\.nuget\\packages\\microsoft.aspnetcore.components.forms\\8.0.13\\microsoft.aspnetcore.components.forms.8.0.13.nupkg.sha512",
     "C:\\Users\\Umar\\.nuget\\packages\\microsoft.aspnetcore.components.web\\8.0.13\\microsoft.aspnetcore.components.web.8.0.13.nupkg.sha512",
     "C:\\Users\\Umar\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\8.0.13\\microsoft.aspnetcore.components.webassembly.8.0.13.nupkg.sha512",

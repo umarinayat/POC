@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\favicon.png"
     },
     {
+      "Id": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\logo.webp",
+      "PackagePath": "staticwebassets\\logo.webp"
+    },
+    {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.POC.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },

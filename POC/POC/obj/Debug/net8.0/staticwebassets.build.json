@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ExU6Zs/RrzmWavSi672E8riGSt7ccnwQMV3KQ6mlHYs=",
+  "Hash": "DyL3j3O/tGbt1T8BxAA320d2pN85spTz+sMF2mn1C00=",
   "Source": "POC",
   "BasePath": "_content/POC",
   "Mode": "Default",
@@ -7957,6 +7957,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.png"
+    },
+    {
+      "Identity": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\logo.webp",
+      "SourceId": "POC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\",
+      "BasePath": "_content/POC",
+      "RelativePath": "logo.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logo.webp"
     }
   ]
 }
