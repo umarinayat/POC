@@ -63,3 +63,4 @@ C:\projects\dotnet\poc\poc\POC\obj\Debug\net8.0\refint\POC.dll
 C:\projects\dotnet\poc\poc\POC\obj\Debug\net8.0\POC.pdb
 C:\projects\dotnet\poc\poc\POC\obj\Debug\net8.0\POC.genruntimeconfig.cache
 C:\projects\dotnet\poc\poc\POC\obj\Debug\net8.0\ref\POC.dll
+C:\projects\dotnet\POC\POC\POC\obj\Debug\net8.0\scopedcss\Components\App.razor.rz.scp.css

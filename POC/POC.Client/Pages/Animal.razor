@@ -1,45 +1,68 @@
 ﻿@page "/animals"
 @using POC.Client.Models
+@using POC.Client.UI
 @using POC.Client.UI.Tables
 @inject IJSRuntime JSRuntime
-
 
 <div class="animal-page">
     <h1>Animal Records</h1>
 
-    <!-- Search and Add Animal Section -->
-    <div class="table-controls">
-        <input type="text" placeholder="Search by name or species..." @bind="SearchTerm" class="search-box" />
-        <button class="add-button" @onclick="AddAnimal">Add Animal</button>
+    <!-- Add Animal Button -->
+    <div class="table-controls mb-3">
+        <input type="text" placeholder="Search by name or species..." @bind="SearchTerm" class="form-control" />
+        <button class="btn btn-primary mt-2" @onclick="ShowAddAnimalModal">Add</button>
     </div>
 
     <!-- Animal Table -->
     <AnimalTable Animals="@PaginatedAnimals" />
 
     <!-- Pagination Controls -->
-    <div class="pagination">
-        <button @onclick="PreviousPage" disabled="@IsFirstPage">Previous</button>
-        <span>Page @CurrentPage of @TotalPages</span>
-        <button @onclick="NextPage" disabled="@IsLastPage">Next</button>
+    <div class="pagination mt-3">
+        <button @onclick="PreviousPage" disabled="@IsFirstPage" class="btn btn-outline-primary">Previous</button>
+        <span class="mx-2">Page @CurrentPage of @TotalPages</span>
+        <button @onclick="NextPage" disabled="@IsLastPage" class="btn btn-outline-primary">Next</button>
     </div>
+
+    <!-- Add Animal Modal -->
+    <CustomModal @ref="AddAnimalModal" Title="Add New Animal" OnSave="AddAnimal" OnClose="CloseAddAnimalModal">
+        <div>
+            <div class="mb-3">
+                <label for="animalName" class="form-label">Name:</label>
+                <input type="text" id="animalName" @bind="NewAnimal.Name" class="form-control" />
+            </div>
+
+            <div class="mb-3">
+                <label for="animalSpecies" class="form-label">Species:</label>
+                <input type="text" id="animalSpecies" @bind="NewAnimal.Species" class="form-control" />
+            </div>
+
+            <div class="form-check mb-3">
+                <input type="checkbox" id="isVaccinated" @bind="NewAnimal.IsVaccinated" class="form-check-input" />
+                <label for="isVaccinated" class="form-check-label">Is Vaccinated?</label>
+            </div>
+
+            @if (NewAnimal.IsVaccinated)
+            {
+                <div class="mb-3">
+                    <label for="vaccinationDate" class="form-label">Vaccination Date:</label>
+                    <input type="date" id="vaccinationDate" @bind="NewAnimal.VaccinationDate" class="form-control" />
+                </div>
+            }
+        </div>
+    </CustomModal>
 </div>
 
-<script>
-    function checking() {
-        console.log("JavaScript function called from C#!");
-        alert("Next button clicked!");
-    }
-</script>
-
 @code {
+    private AddAnimalModel NewAnimal = new();
     private List<Models.Animal> AnimalList = new();
     private List<Models.Animal> FilteredAnimals = new();
     private List<Models.Animal> PaginatedAnimals = new();
 
+    private CustomModal? AddAnimalModal;
     private string SearchTerm = string.Empty;
     private int CurrentPage = 1;
-    private int PageSize = 10; // Animals per page
-    private int TotalPages = 2;
+    private int PageSize = 3;
+    private int TotalPages = 1;
     private bool IsFirstPage => CurrentPage == 1;
     private bool IsLastPage => CurrentPage >= TotalPages;
 
@@ -48,15 +71,44 @@
         AnimalList = new List<Models.Animal>
         {
             new Models.Animal { Name = "Bella", Species = "Dog", IsVaccinated = true, VaccinationDate = new DateTime(2024, 1, 10) },
-            new Models.Animal { Name = "Max", Species = "Cat", IsVaccinated = false, VaccinationDate = null },
+            new Models.Animal { Name = "Max", Species = "Cat", IsVaccinated = false },
             new Models.Animal { Name = "Charlie", Species = "Horse", IsVaccinated = true, VaccinationDate = new DateTime(2024, 3, 5) },
-            new Models.Animal { Name = "Luna", Species = "Rabbit", IsVaccinated = false, VaccinationDate = null },
-            new Models.Animal { Name = "Rocky", Species = "Dog", IsVaccinated = true, VaccinationDate = new DateTime(2024, 4, 1) },
-            new Models.Animal { Name = "Milo", Species = "Cat", IsVaccinated = false, VaccinationDate = null }
+            new Models.Animal { Name = "Luna", Species = "Rabbit", IsVaccinated = false }
         };
 
         FilteredAnimals = AnimalList;
         UpdatePagination();
+    }
+
+    private void ShowAddAnimalModal()
+    {
+        NewAnimal = new AddAnimalModel();
+        AddAnimalModal?.Show();
+    }
+
+    private void CloseAddAnimalModal()
+    {
+        AddAnimalModal?.Hide();
+    }
+
+    private void AddAnimal()
+    {
+        if (string.IsNullOrWhiteSpace(NewAnimal.Name) || string.IsNullOrWhiteSpace(NewAnimal.Species))
+        {
+            Console.WriteLine("Name and Species are required.");
+            return;
+        }
+
+        AnimalList.Add(new Models.Animal
+            {
+                Name = NewAnimal.Name,
+                Species = NewAnimal.Species,
+                IsVaccinated = NewAnimal.IsVaccinated,
+                VaccinationDate = NewAnimal.IsVaccinated ? NewAnimal.VaccinationDate : null
+            });
+
+        RefreshData();
+        CloseAddAnimalModal();
     }
 
     private void RefreshData()
@@ -66,53 +118,31 @@
                      || a.Species.Contains(SearchTerm, StringComparison.OrdinalIgnoreCase))
             .ToList();
 
-        CurrentPage = 1;
         UpdatePagination();
     }
 
     private void UpdatePagination()
     {
         TotalPages = (int)Math.Ceiling(FilteredAnimals.Count / (double)PageSize);
-
-        if (TotalPages == 0)
-            TotalPages = 1;  // Ensure at least one page exists
-
-        if (CurrentPage > TotalPages)
-            CurrentPage = TotalPages;
-
+        CurrentPage = Math.Min(CurrentPage, TotalPages);
         PaginatedAnimals = FilteredAnimals
             .Skip((CurrentPage - 1) * PageSize)
             .Take(PageSize)
             .ToList();
     }
 
-    private async Task AddAnimal()
-    {
-        await JSRuntime.InvokeVoidAsync("checking");
-
-        AnimalList.Add(new Models.Animal
-            {
-                Name = "New Animal",
-                Species = "Unknown",
-                IsVaccinated = false,
-                VaccinationDate = null
-            });
-
-        RefreshData();
-    }
-
     private async Task NextPage()
     {
-        await JSRuntime.InvokeVoidAsync("checking"); // Use JSRuntime instead of JS
-        if (CurrentPage < TotalPages)
+        if (!IsLastPage)
         {
             CurrentPage++;
             UpdatePagination();
         }
     }
-    private void PreviousPage()
+
+    private async Task PreviousPage()
     {
-        if (CurrentPage > 1)
+        if (!IsFirstPage)
         {
             CurrentPage--;
             UpdatePagination();

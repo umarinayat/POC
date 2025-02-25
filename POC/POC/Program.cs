@@ -77,8 +77,13 @@ app.MapGet("/auth/github/callback", async (HttpContext context) =>
 // Logout Endpoint
 app.MapGet("/auth/logout", async (HttpContext context) =>
 {
+    // Sign the user out from the app
     await context.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
-    return Results.Redirect("/");
+
+    // Clear GitHub session by redirecting to GitHub's logout endpoint
+    var logoutUrl = "https://localhost:7146";
+    context.Response.Redirect(logoutUrl);
 });
+
 
 app.Run();

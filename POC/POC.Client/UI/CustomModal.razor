@@ -1,0 +1,40 @@
+﻿@* Components/CustomModal.razor *@
+<div class="custom-modal-backdrop" style="@(IsVisible ? "display: block;" : "display: none;")">
+    <div class="custom-modal">
+        <div class="custom-modal-header">
+            <h5>@Title</h5>
+            <button type="button" class="close-btn" @onclick="Close">×</button>
+        </div>
+
+        <div class="custom-modal-body">
+            @ChildContent
+        </div>
+
+        <div class="custom-modal-footer">
+            @if (ShowSaveButton)
+            {
+                <button class="btn btn-success" @onclick="OnSave">Save</button>
+            }
+            <button class="btn btn-secondary" @onclick="Close">Close</button>
+        </div>
+    </div>
+</div>
+
+@code {
+    [Parameter] public string Title { get; set; } = "Modal Title";
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public EventCallback OnClose { get; set; }
+    [Parameter] public EventCallback OnSave { get; set; }
+    [Parameter] public bool ShowSaveButton { get; set; } = true;
+    private bool IsVisible { get; set; }
+
+    public void Show() => IsVisible = true;
+    public void Hide() => IsVisible = false;
+
+    private async Task Close()
+    {
+        IsVisible = false;
+        if (OnClose.HasDelegate)
+            await OnClose.InvokeAsync();
+    }
+}

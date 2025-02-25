@@ -1031,3 +1031,4 @@ C:\projects\dotnet\POC\POC\POC.Client\obj\Debug\net8.0\compressed\wm84lfsinf.gz
 C:\projects\dotnet\POC\POC\POC.Client\obj\Debug\net8.0\compressed\hnfefn26f2.gz
 C:\projects\dotnet\POC\POC\POC.Client\obj\Debug\net8.0\compressed\uq2tpli8fx.gz
 C:\projects\dotnet\POC\POC\POC.Client\obj\Debug\net8.0\compressed\rse8adpfcg.gz
+C:\projects\dotnet\POC\POC\POC.Client\obj\Debug\net8.0\scopedcss\UI\CustomModal.razor.rz.scp.css

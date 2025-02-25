@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DyL3j3O/tGbt1T8BxAA320d2pN85spTz+sMF2mn1C00=",
+  "Hash": "JKpJce60gRn66vNPP4k9NGt+6z7bjTSJJarHZf10gqw=",
   "Source": "POC",
   "BasePath": "_content/POC",
   "Mode": "Default",
@@ -7807,6 +7807,25 @@
       "OriginalItemSpec": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\POC.Client.bundle.scp.css"
     },
     {
+      "Identity": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\wwwroot\\app.js",
+      "SourceId": "POC.Client",
+      "SourceType": "Project",
+      "ContentRoot": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.js"
+    },
+    {
       "Identity": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\wwwroot\\appsettings.Development.json",
       "SourceId": "POC.Client",
       "SourceType": "Project",
@@ -7976,6 +7995,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\logo.webp"
+    },
+    {
+      "Identity": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\profile.png",
+      "SourceId": "POC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\",
+      "BasePath": "_content/POC",
+      "RelativePath": "profile.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\profile.png"
+    },
+    {
+      "Identity": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\Usquare logo-04.png",
+      "SourceId": "POC",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\",
+      "BasePath": "_content/POC",
+      "RelativePath": "Usquare logo-04.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Usquare logo-04.png"
     }
   ]
 }

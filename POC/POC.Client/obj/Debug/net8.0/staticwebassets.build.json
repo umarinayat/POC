@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "zB1jqGfjdUh5qBFq0FbMKRygkSb71A+T2R3axM5S9Lk=",
+  "Hash": "KMVLFUywTYs3Flg4F6ZuWVdWb+ZFS/FWROX9A0qZFqQ=",
   "Source": "POC.Client",
   "BasePath": "/",
   "Mode": "Default",
@@ -7805,6 +7805,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\POC.Client.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\wwwroot\\app.js",
+      "SourceId": "POC.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\app.js"
     },
     {
       "Identity": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\wwwroot\\appsettings.Development.json",

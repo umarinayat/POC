@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\POC.bundle.scp.css"
     },
     {
+      "Id": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\Usquare logo-04.png",
+      "PackagePath": "staticwebassets\\Usquare logo-04.png"
+    },
+    {
       "Id": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\app.css",
       "PackagePath": "staticwebassets\\app.css"
     },
@@ -23,6 +27,10 @@
     {
       "Id": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\logo.webp",
       "PackagePath": "staticwebassets\\logo.webp"
+    },
+    {
+      "Id": "C:\\projects\\dotnet\\POC\\POC\\POC\\wwwroot\\profile.png",
+      "PackagePath": "staticwebassets\\profile.png"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.POC.Microsoft.AspNetCore.StaticWebAssets.props",

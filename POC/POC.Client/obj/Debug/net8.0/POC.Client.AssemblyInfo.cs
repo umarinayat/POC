@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("POC.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aea595e3574cd0b5cdc425cff1f007e13cc169ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ffa06379e2629db94b05bbc9f12463a63ce4124")]
 [assembly: System.Reflection.AssemblyProductAttribute("POC.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("POC.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

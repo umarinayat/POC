@@ -103,6 +103,39 @@
     }
 
 
+.animal-page[b-w0yom1g6d3] {
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.add-animal-form[b-w0yom1g6d3] {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-control[b-w0yom1g6d3] {
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+}
+
+.table-controls[b-w0yom1g6d3] {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.pagination[b-w0yom1g6d3] {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+
 /* /Pages/Dashboard.razor.rz.scp.css */
 /* General dashboard background */
 .content-wrapper[b-d13y0j53jk] {
@@ -235,6 +268,62 @@ h1.m-0[b-d13y0j53jk] {
 
 .bg-primary[b-d13y0j53jk] {
     background-color: #007bff !important;
+}
+/* /UI/CustomModal.razor.rz.scp.css */
+/* CustomModal Styles */
+.custom-modal-backdrop[b-rjpatt35tz] {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+.custom-modal[b-rjpatt35tz] {
+    background-color: white;
+    width: 500px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn-b-rjpatt35tz 0.3s ease;
+}
+
+.custom-modal-header[b-rjpatt35tz] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.custom-modal-body[b-rjpatt35tz] {
+    padding: 15px 0;
+}
+
+.custom-modal-footer[b-rjpatt35tz] {
+    display: flex;
+    justify-content: end;
+    padding-top: 10px;
+    border-top: 1px solid #dee2e6;
+}
+
+.close-btn[b-rjpatt35tz] {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #ff4d4d;
+}
+
+/* Modal Animation */
+@keyframes fadeIn-b-rjpatt35tz {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
 }
 /* /UI/Tables/AnimalTable.razor.rz.scp.css */
 /* Animal Table Styling */

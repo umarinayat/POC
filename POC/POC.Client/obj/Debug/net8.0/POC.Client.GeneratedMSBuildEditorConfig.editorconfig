@@ -42,6 +42,10 @@ build_metadata.AdditionalFiles.CssScope = b-w0yom1g6d3
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGFzaGJvYXJkLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-d13y0j53jk
 
+[C:/projects/dotnet/POC/POC/POC.Client/UI/CustomModal.razor]
+build_metadata.AdditionalFiles.TargetPath = VUlcQ3VzdG9tTW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-rjpatt35tz
+
 [C:/projects/dotnet/POC/POC/POC.Client/UI/Tables/AnimalTable.razor]
 build_metadata.AdditionalFiles.TargetPath = VUlcVGFibGVzXEFuaW1hbFRhYmxlLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-86rrobol1n

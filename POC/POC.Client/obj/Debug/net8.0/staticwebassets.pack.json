@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\POC.Client.bundle.scp.css"
     },
     {
+      "Id": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\wwwroot\\app.js",
+      "PackagePath": "staticwebassets\\app.js"
+    },
+    {
       "Id": "C:\\projects\\dotnet\\POC\\POC\\POC.Client\\wwwroot\\appsettings.Development.json",
       "PackagePath": "staticwebassets\\appsettings.Development.json"
     },
